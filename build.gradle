@@ -4,11 +4,6 @@ description = """This is a Gradle Test
 
 version = ""
 
-apply plugin: 'java'
-
-//val teamcity: Map<String, String> by project
-//val test_system_property: String by project
-
 
 task test {
   group = "Test group"
@@ -18,30 +13,6 @@ task test {
     println "Doing Something"
   }
 }
-
-/*task printProperties {
-    doLast {
-        project.getProperties().forEach { key, v ->
-            println("##gradle-property name='${key}' value='${v}'")
-        }
-
-        teamcity.forEach { key, v ->
-            println "##tc-property name='${key}' value='${v}'"
-        }
-
-    }
-}
-
-task printTcProperty {
-    doLast {
-        println("##tc-property ${teamcity["test_teamcity_property"]}")
-    }
-}
-task printSystemProperty {
-    doLast {
-        println("##system-property ${test_system_property}")
-    }
-}*/
 
 String getSonarQubeHost() {
   if(project.hasProperty("teamcity")) {
