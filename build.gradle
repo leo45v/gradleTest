@@ -4,10 +4,7 @@ description = """This is a Gradle Test
 
 version = ""
 
-plugins {
-    id 'java'
-}
-
+apply plugin: 'java'
 
 val teamcity: Map<String, String> by project
 val test_system_property: String by project
