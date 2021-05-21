@@ -22,7 +22,7 @@ String getSonarQubeHost() {
 }
 
 String getSonarQubeToken() {
-  if(project.hasProperty("token") {
+  if(project.hasProperty("token")) {
     return project.property("token").toString()
   }
   return "NO TOKEN"
