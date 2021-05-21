@@ -6,8 +6,8 @@ version = ""
 
 apply plugin: 'java'
 
-val teamcity: Map<String, String> by project
-val test_system_property: String by project
+//val teamcity: Map<String, String> by project
+//val test_system_property: String by project
 
 
 task test {
@@ -19,7 +19,7 @@ task test {
   }
 }
 
-task printProperties {
+/*task printProperties {
     doLast {
         project.getProperties().forEach { key, v ->
             println("##gradle-property name='${key}' value='${v}'")
@@ -41,11 +41,11 @@ task printSystemProperty {
     doLast {
         println("##system-property ${test_system_property}")
     }
-}
+}*/
 
 String getSonarQubeHost() {
   if(project.hasProperty("teamcity")) {
-    return teamcity["sonarqube.host"]
+    return teamcity["teamcity.sonarqube.host"]
   }
   return "NO INTEGRATED"
 }
