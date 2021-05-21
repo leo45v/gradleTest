@@ -4,13 +4,6 @@ description = """This is a Gradle Test
 
 version = ""
 
-plugins {
-    java
-}
-
-val teamcity: Map<String, String> by project
-val test_system_property: String by project
-
 buildscript{
   repositories{
     maven {
@@ -24,8 +17,16 @@ buildscript{
 
 configure(subprojects) {
   apply plugin "org.sonarqube"
-  
 }
+
+plugins {
+    java
+}
+
+
+val teamcity: Map<String, String> by project
+val test_system_property: String by project
+
 
 task test {
   group = "Test group"
