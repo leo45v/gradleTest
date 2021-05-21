@@ -21,7 +21,16 @@ String getSonarQubeHost() {
   return "NO INTEGRATED"
 }
 
+String getSonarQubeToken() {
+  if(project.hasProperty("token") {
+    return project.property("token").toString()
+  }
+  return "NO TOKEN"
+}
+
 println "THIS IS TEAMCITY PARAM ${getSonarQubeHost()}"
+
+println "THIS IS TEAMCITY PARAM ${getSonarQubeToken()}"
 
 println teamcity
 
