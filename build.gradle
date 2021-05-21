@@ -37,3 +37,6 @@ String getSonarQubeHost() {
 }
 
 println "THIS IS TEAMCITY PARAM ${getSonarQubeHost()}"
+
+println teamcity
+
