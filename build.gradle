@@ -36,4 +36,4 @@ String getSonarQubeHost() {
   return "NO INTEGRATED"
 }
 
-println getSonarQubeHost()
+println "THIS IS TEAMCITY PARAM ${getSonarQubeHost()}"
