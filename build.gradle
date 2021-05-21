@@ -5,7 +5,7 @@ description = """This is a Gradle Test
 version = ""
 
 plugins {
-    java
+    id 'java'
 }
 
 
